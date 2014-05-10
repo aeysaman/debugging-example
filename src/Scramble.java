@@ -12,9 +12,18 @@ public class Scramble {
 		
 		int i = 0;
 		while(i < upperCaseWord.length()) {
-			// scramble this current and next letter if applicable
+			char currentLetter = upperCaseWord.charAt(i);
+			char nextLetter = upperCaseWord.charAt(i + 1);
 			
+			// scramble this current and next letter if applicable
+			if(currentLetter == 'A' && nextLetter != 'A') {
+				scrambledWord = (scrambledWord + nextLetter) + currentLetter;
+			}
 			// otherwise check the next set of letters
+			else {
+				scrambledWord += currentLetter;
+			}
+			
 			i++;
 		}
 		
