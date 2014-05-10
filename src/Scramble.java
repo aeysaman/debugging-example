@@ -11,7 +11,7 @@ public class Scramble {
 		String scrambledWord = "";
 		
 		int i = 0;
-		while(i < upperCaseWord.length()) {
+		while(i < upperCaseWord.length() - 1) {
 			char currentLetter = upperCaseWord.charAt(i);
 			char nextLetter = upperCaseWord.charAt(i + 1);
 			
@@ -25,6 +25,10 @@ public class Scramble {
 				scrambledWord += currentLetter;
 				i++;
 			}
+		}
+		
+		if(i == upperCaseWord.length() - 1) {
+			scrambledWord += upperCaseWord.charAt(i);
 		}
 		
 		return scrambledWord;
