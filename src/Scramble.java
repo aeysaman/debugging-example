@@ -49,7 +49,13 @@ public class Scramble {
 			String scrambledWord = scrambleWord(word);
 			
 			// if the scrambledWord is the same, remove it
+			if(scrambledWord.compareTo(word) == 0) {
+				wordList.remove(i);
+			}
 			// otherwise replace it with the scrambled version
+			else {
+				wordList.set(i, scrambledWord);
+			}
 		}
 	}
 }
