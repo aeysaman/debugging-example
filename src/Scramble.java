@@ -18,13 +18,13 @@ public class Scramble {
 			// scramble this current and next letter if applicable
 			if(currentLetter == 'A' && nextLetter != 'A') {
 				scrambledWord = (scrambledWord + nextLetter) + currentLetter;
+				i += 2;
 			}
 			// otherwise check the next set of letters
 			else {
 				scrambledWord += currentLetter;
+				i++;
 			}
-			
-			i++;
 		}
 		
 		return scrambledWord;
