@@ -44,6 +44,12 @@ public class Scramble {
 	}
 	
 	public static void scrambleOrRemove(List<String> wordList) {
-		
+		for(int i = 0; i < wordList.size(); i++) {
+			String word = wordList.get(i);
+			String scrambledWord = scrambleWord(word);
+			
+			// if the scrambledWord is the same, remove it
+			// otherwise replace it with the scrambled version
+		}
 	}
 }
