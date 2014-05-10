@@ -1,17 +1,34 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Scramble {
 
 	public static void main(String[] args) {
-		String test = "ABRACADABRA";
-		String answer = "BARCADABARA";
-		String scrambledWord = scrambleWord(test);
+		List<String> words = new ArrayList<String>();
+		words.add("TAN");
+		words.add("ABRACADABRA");
+		words.add("WHOA");
 		
-		if(scrambledWord.compareTo(answer) == 0) {
-			System.out.println("Correct!");
+		List<String> scrambledWords = new ArrayList<String>();
+		scrambledWords.add("TNA");
+		scrambledWords.add("BARCADABARA");
+		
+		scrambleOrRemove(words);
+		boolean correct = true;
+		
+		for(int i = 0; i < words.size(); i++) {
+			String word = words.get(i);
+			String scrambledWord = scrambledWords.get(i);
+			
+			if(word.compareTo(scrambledWord) != 0) {
+				System.out.println("WRONG!");
+				correct = false;
+				break;
+			}
 		}
-		else {
-			System.out.println("WRONG!");
+		
+		if(correct) {
+			System.out.println("Correct!");
 		}
 	}
 	
