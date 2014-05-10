@@ -3,7 +3,16 @@ import java.util.List;
 public class Scramble {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String test = "ABRACADABRA";
+		String answer = "BARCADABARA";
+		String scrambledWord = scrambleWord(test);
+		
+		if(scrambledWord.compareTo(answer) == 0) {
+			System.out.println("Correct!");
+		}
+		else {
+			System.out.println("WRONG!");
+		}
 	}
 	
 	public static String scrambleWord(String word) {
